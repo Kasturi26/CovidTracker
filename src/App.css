@@ -1,0 +1,56 @@
+/*It adds an imaginary margin on the top so lets set it to zero*/
+* { 
+  margin :0
+}
+.app__header{
+  display: flex; /*By default it will come to single row*/
+  align-items: center;
+  margin-bottom:20px ;
+  justify-content: space-between; /* Seperate by space*/
+}
+
+.app_stats{
+  display: flex;
+  justify-content: space-between; /* Seperate by space*/
+
+}
+body{ /* whole body of background */
+  background-color: #f5f6fa;
+}
+.app{ /* complete parent app makes screen in two childs which will be on single row */
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.app__dropdown {
+  background-color: white;
+}
+
+@media(max-width :800px) { /* Making responsive when it hits 900px then push everything to column dont squiz*/
+  .app{
+    flex-direction: column;
+  }
+}
+.app__left{
+  flex:0.9;
+}
+
+.app__right{
+  display: flex;
+  flex-direction: column;
+}
+
+.app__right .MuiCardContent-root{
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.app__graph{
+  flex-grow: 1;
+}
+
+.app__graphTitle{
+  margin-top: 20px;
+}
